@@ -6,11 +6,12 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Typed from 'typed.js';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class LoginComponent implements OnInit, AfterViewInit {
+
+export class HeaderComponent implements OnInit, AfterViewInit {
   loginForm: FormGroup;
   logoUrl: string = '';
 
@@ -37,7 +38,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
     this.applyStoredTheme();
   }
 
-  // ✅ Load Logo Dynamically
+  // ✅ Load Logo Image
   loadLogo() {
     const logoUrl = 'https://avatars.githubusercontent.com/u/124091983';
     this.imageLoader.loadImage(logoUrl).subscribe((blob: Blob) => {
