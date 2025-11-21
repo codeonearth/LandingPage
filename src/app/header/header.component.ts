@@ -4,6 +4,7 @@ import { ImageLoaderService } from '../image-loader.service';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Typed from 'typed.js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +21,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
     private imageLoader: ImageLoaderService,
     private renderer: Renderer2
   ) {
@@ -32,7 +34,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.loadLogo();
   }
-
+  goToHome() {
+    this.router.navigate(['']);
+  }
+  goToBlog() {
+    this.router.navigate(['/blog']);
+  }
+goToServices() {
+    this.router.navigate(['/services']);
+  }
   ngAfterViewInit(): void {
     this.initializeLandingPage();
     this.applyStoredTheme();

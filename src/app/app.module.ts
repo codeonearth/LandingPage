@@ -12,12 +12,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { homeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServicesComponent } from './services/services.component';
+import { BlogComponent } from './blog/blog.component';
 @NgModule({
   declarations: [
     AppComponent,
     homeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ServicesComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
